@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reymund B. Derilo - Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#F8F9FA',
+                            card: '#FFFFFF',
+                            border: '#E9ECEF',
+                            borderHover: '#CBD5E1',
+                            text: '#0F172A',
+                            muted: '#64748B',
+                            accent: '#F97316',
+                            accentLight: '#FFF7ED',
+                            accentBorder: '#FFEDD5',
+                            dark: '#020617',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'marquee': 'marquee 25s linear infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F8F9FA;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #CBD5E1;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94A3B8;
+        }
+        .bento-card {
+            transition: all 0.25s ease-in-out;
+        }
+        .bento-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px -10px rgba(15, 23, 42, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-brand-bg text-brand-text font-sans antialiased min-h-screen selection:bg-brand-accent selection:text-white">
+
+    <div class="max-w-[1500px] mx-auto min-h-screen flex flex-col lg:flex-row p-4 md:p-6 lg:p-8 gap-6">
+
+        <!-- ================= LEFT SIDEBAR ================= -->
+        <aside class="w-full lg:w-72 xl:w-80 flex-shrink-0 flex flex-col justify-between gap-6 bg-brand-card rounded-3xl p-6 border border-brand-border shadow-sm h-fit lg:sticky lg:top-8">
+            <div class="space-y-6">
+                <!-- Profile Avatar & Details -->
+                <div class="flex flex-col items-center text-center">
+                    <div class="relative mb-4 group">
+                        <div class="w-32 h-32 rounded-full p-1 ring-2 ring-brand-accent/20 bg-gradient-to-tr from-brand-accent to-amber-400 overflow-hidden shadow-inner">
+                            <img src="me.jpg" 
+                                 alt="Reymund B. Derilo" 
+                                 onerror="this.onerror=null; this.src='https://placehold.co/300x300/f97316/ffffff?text=Reymund+Derilo';" 
+                                 class="w-full h-full object-cover rounded-full group-hover:scale-105 transition duration-300">
+                        </div>
+                        <span class="absolute bottom-1 right-1 w-5 h-5 bg-emerald-500 border-2 border-white rounded-full flex items-center justify-center text-[10px] text-white font-bold" title="Available for Hiring">✓</span>
+                    </div>
+
+                    <div class="flex items-center gap-1.5 justify-center mb-1">
+                        <h1 class="text-xl font-extrabold tracking-tight text-brand-text">Reymund B. Derilo</h1>
+                        <i data-lucide="badge-check" class="w-5 h-5 fill-sky-500 text-white"></i>
+                    </div>
+                    <p class="text-xs font-semibold text-brand-accent bg-brand-accentLight px-3 py-1 rounded-full border border-brand-accentBorder mb-3">
+                        @rderilo58
+                    </p>
+                    <p class="text-xs text-brand-muted font-medium px-2">
+                        Multimedia & E-Commerce Lead | IT Specialist | Network Administrator
+                    </p>
+                </div>
+
+                <!-- Contact Links -->
+                <div class="space-y-2.5 pt-3 border-t border-brand-border text-xs text-brand-muted">
+                    <div class="flex items-center gap-2.5 px-2 py-1.5 rounded-lg hover:bg-brand-bg transition">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-brand-accent"></i>
+                        <span>Philippines</span>
+                    </div>
+                    <a href="mailto:rderilo58@gmail.com" class="flex items-center gap-2.5 px-2 py-1.5 rounded-lg hover:bg-brand-bg transition text-brand-text font-medium group">
+                        <i data-lucide="mail" class="w-4 h-4 text-brand-accent"></i>
+                        <span class="truncate group-hover:text-brand-accent">rderilo58@gmail.com</span>
+                    </a>
+                    <a href="tel:09385659166" class="flex items-center gap-2.5 px-2 py-1.5 rounded-lg hover:bg-brand-bg transition text-brand-text font-medium group">
+                        <i data-lucide="phone" class="w-4 h-4 text-brand-accent"></i>
+                        <span class="group-hover:text-brand-accent">09385659166</span>
+                    </a>
+                </div>
+
+                <!-- Navigation Menu -->
+                <nav class="pt-3 border-t border-brand-border space-y-1">
+                    <a href="#home" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-xl bg-brand-text text-white font-medium text-sm transition shadow-sm">
+                        <i data-lucide="home" class="w-4 h-4"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="#sample-work" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-xl text-brand-muted hover:text-brand-text hover:bg-brand-bg font-medium text-sm transition">
+                        <i data-lucide="video" class="w-4 h-4"></i>
+                        <span>Sample Work</span>
+                    </a>
+                    <a href="#handled-stores" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-xl text-brand-muted hover:text-brand-text hover:bg-brand-bg font-medium text-sm transition">
+                        <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                        <span>Handled Stores</span>
+                    </a>
+                    <a href="#experience" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-xl text-brand-muted hover:text-brand-text hover:bg-brand-bg font-medium text-sm transition">
+                        <i data-lucide="briefcase" class="w-4 h-4"></i>
+                        <span>Experience</span>
+                    </a>
+                    <a href="#credentials" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-xl text-brand-muted hover:text-brand-text hover:bg-brand-bg font-medium text-sm transition">
+                        <i data-lucide="award" class="w-4 h-4"></i>
+                        <span>Certifications</span>
+                    </a>
+                    <a href="#services" class="nav-item flex items-center gap-3 px-3 py-2.5 rounded-xl text-brand-muted hover:text-brand-text hover:bg-brand-bg font-medium text-sm transition">
+                        <i data-lucide="wrench" class="w-4 h-4"></i>
+                        <span>Skills & Services</span>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Footer Meta -->
+            <div class="pt-4 border-t border-brand-border flex items-center justify-between text-xs text-brand-muted">
+                <span>© 2026 Reymund Derilo</span>
+                <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-600 font-medium text-[11px] border border-emerald-200">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Active
+                </span>
+            </div>
+        </aside>
+
+        <!-- ================= MAIN CONTENT AREA ================= -->
+        <main id="home" class="flex-1 flex flex-col gap-6 overflow-hidden">
+
+            <!-- Header Banner Section -->
+            <header class="bg-brand-card rounded-3xl p-6 md:p-8 border border-brand-border shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-6 relative overflow-hidden">
+                <div class="max-w-2xl z-10 space-y-2">
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-brand-text leading-tight">
+                        Optimizing Networks. <br class="hidden sm:inline">Scaling E-Commerce & Media.
+                    </h2>
+                    <p class="text-sm md:text-base text-brand-muted font-normal leading-relaxed">
+                        Multidisciplinary IT Specialist, Network Administrator & E-Commerce Lead with proven expertise in enterprise setup, creative content production, and digital store management.
+                    </p>
+                </div>
+                <div class="z-10 flex-shrink-0">
+                    <button onclick="openContactModal()" class="inline-flex items-center gap-2 bg-brand-text text-white hover:bg-brand-accent px-6 py-3 rounded-2xl font-semibold text-sm transition duration-300 shadow-lg shadow-slate-900/10 hover:shadow-orange-500/20 group">
+                        <span>Get in touch</span>
+                        <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition"></i>
+                    </button>
+                </div>
+                <div class="absolute -right-12 -bottom-12 w-64 h-64 bg-brand-accent/5 rounded-full blur-3xl pointer-events-none"></div>
+            </header>
+
+            <!-- Tools & Tech Ticker -->
+            <section class="bg-brand-card rounded-2xl p-4 border border-brand-border shadow-sm flex flex-col sm:flex-row items-center gap-4 overflow-hidden">
+                <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-accent bg-brand-accentLight px-3 py-1.5 rounded-xl border border-brand-accentBorder shrink-0">
+                    <i data-lucide="cpu" class="w-4 h-4"></i>
+                    <span>DAILY DRIVERS</span>
+                </div>
+                <div class="relative flex overflow-x-hidden w-full">
+                    <div class="py-1 animate-marquee whitespace-nowrap flex items-center gap-3 text-xs font-semibold text-brand-muted">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-brand-bg border border-brand-border text-brand-text"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-blue-500"></i> Cisco Networking</span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-brand-bg border border-brand-border text-brand-text"><i data-lucide="image" class="w-3.5 h-3.5 text-indigo-500"></i> Adobe Photoshop</span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-brand-bg border border-brand-border text-brand-text"><i data-lucide="video" class="w-3.5 h-3.5 text-purple-500"></i> Premiere Pro</span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-brand-bg border border-brand-border text-brand-text"><i data-lucide="film" class="w-3.5 h-3.5 text-pink-500"></i> After Effects</span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-brand-bg border border-brand-border text-brand-text"><i data-lucide="shopping-bag" class="w-3.5 h-3.5 text-emerald-500"></i> TikTok Shop / Shopee</span>
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-brand-bg border border-brand-border text-brand-text"><i data-lucide="globe" class="w-3.5 h-3.5 text-cyan-500"></i> WordPress & Shopify</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= BENTO GRID CONTAINER ================= -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- CARD 1: SAMPLE WORK / VIDEO CREATIVES (SPAN 3 COLUMNS) -->
+                <section id="sample-work" class="bento-card bg-brand-card rounded-3xl p-6 border border-brand-border shadow-sm lg:col-span-3">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-2">
+                            <div class="w-8 h-8 rounded-xl bg-brand-accentLight border border-brand-accentBorder flex items-center justify-center text-brand-accent">
+                                <i data-lucide="video" class="w-4 h-4"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-brand-text">Featured Multimedia & Video Work</h3>
+                        </div>
+                        <span class="text-xs font-semibold text-brand-accent bg-brand-accentLight px-2.5 py-1 rounded-full border border-brand-accentBorder">
+                            Creative Showcase
+                        </span>
+                    </div>
+                    <p class="text-xs text-brand-muted mb-6">High-engagement video content produced and edited for e-commerce, product campaigns, and brand marketing.</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center justify-items-center">
+                        <!-- Video Sample 1 -->
+                        <div class="w-full max-w-sm bg-brand-bg p-4 rounded-2xl border border-brand-border shadow-sm flex flex-col items-center">
+                            <div class="w-full aspect-[9/16] bg-black rounded-xl overflow-hidden mb-3 shadow-md">
+                                <video controls class="w-full h-full object-cover rounded-xl" preload="metadata">
+                                    <source src="11e38764-0cab-4b3f-943e-68f8c4c8bc91.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <h4 class="font-bold text-xs text-brand-text text-center">E-Commerce Short Video Ad</h4>
+                            <p class="text-[11px] text-brand-muted text-center">Short-form promotional creative optimized for TikTok & Social Reels</p>
+                        </div>
+
+                        <!-- Video Sample 2 -->
+                        <div class="w-full max-w-sm bg-brand-bg p-4 rounded-2xl border border-brand-border shadow-sm flex flex-col items-center">
+                            <div class="w-full aspect-[9/16] bg-black rounded-xl overflow-hidden mb-3 shadow-md">
+                                <video controls class="w-full h-full object-cover rounded-xl" preload="metadata">
+                                    <source src="ea6b1959-a813-443c-9e40-b923f92ec90d.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <h4 class="font-bold text-xs text-brand-text text-center">Product Showcase & UGC Creative</h4>
+                            <p class="text-[11px] text-brand-muted text-center">Engaging product presentation with audio narration & visual highlights</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CARD 2: HANDLED STORES (SPAN 3 COLUMNS) -->
+                <section id="handled-stores" class="bento-card bg-brand-card rounded-3xl p-6 border border-brand-border shadow-sm lg:col-span-3">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-2">
+                            <div class="w-8 h-8 rounded-xl bg-brand-accentLight border border-brand-accentBorder flex items-center justify-center text-brand-accent">
+                                <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                            </div>
+                            <h3 class="font-bold text-lg text-brand-text">Handled Stores & Brand Management</h3>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Wadfow PH Store -->
+                        <a href="https://web.facebook.com/wadfowph" target="_blank" rel="noopener noreferrer" class="p-4 rounded-2xl bg-brand-bg border border-brand-border hover:border-brand-accent transition group flex items-start justify-between">
+                            <div class="space-y-1">
+                                <div class="flex items-center gap-2">
+                                    <h4 class="font-bold text-brand-text text-sm group-hover:text-brand-accent transition">Wadfow PH</h4>
+                                    <i data-lucide="external-link" class="w-3.5 h-3.5 text-brand-muted group-hover:text-brand-accent transition"></i>
+                                </div>
+                                <p class="text-xs text-brand-muted">Official Facebook Page & E-Commerce Operations</p>
+                                <span class="inline-block text-[10px] font-semibold text-brand-accent bg-brand-accentLight px-2 py-0.5 rounded border border-brand-accentBorder">Handled Brand Store</span>
+                            </div>
+                            <div class="p-2 rounded-xl bg-blue-50 text-blue-600 border border-blue-100">
+                                <i data-lucide="facebook" class="w-5 h-5"></i>
+                            </div>
+                        </a>
+
+                        <!-- Winland Electronics -->
+                        <div class="p-4 rounded-2xl bg-brand-bg border border-brand-border flex items-start justify-between">
+                            <div class="space-y-1">
+                                <h4 class="font-bold text-brand-text text-sm">Winland Electronics & Electrical Center</h4>
+                                <p class="text-xs text-brand-muted">Multi-channel operations: TikTok Shop, Shopee, Lazada & Socials</p>
+                                <span class="inline-block text-[10px] font-semibold text-slate-600 bg-slate-200 px-2 py-0.5 rounded">E-Commerce & Marketing Operations</span>
+                            </div>
+                            <div class="p-2 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-100">
+                                <i data-lucide="store" class="w-5 h-5"></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CARD 3: EXPERIENCE (SPAN 2 COLUMNS) -->
+                <section id="experience" class="bento-card bg-brand-card rounded-3xl p-6 border border-brand-border shadow-sm md:col-span-2 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 rounded-xl bg-brand-accentLight border border-brand-accentBorder flex items-center justify-center text-brand-accent">
+                                    <i data-lucide="briefcase" class="w-4 h-4"></i>
+                                </div>
+                                <h3 class="font-bold text-lg text-brand-text">Work Experience</h3>
+                            </div>
+                        </div>
+
+                        <div class="space-y-4">
+                            <!-- Role 1 -->
+                            <div class="p-4 rounded-2xl bg-brand-bg border border-brand-border hover:border-brand-borderHover transition">
+                                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+                                    <h4 class="font-bold text-brand-text text-sm">Faculty Member</h4>
+                                    <span class="text-[11px] font-semibold text-brand-accent bg-brand-accentLight px-2.5 py-0.5 rounded-full w-fit">Ongoing</span>
+                                </div>
+                                <p class="text-xs font-semibold text-brand-muted mb-2">Our Lady of Fatima University</p>
+                                <p class="text-xs text-brand-muted leading-relaxed">Educating and mentoring students in Information Technology, system administration concepts, and modern computer engineering standards.</p>
+                            </div>
+
+                            <!-- Role 2 -->
+                            <div class="p-4 rounded-2xl bg-brand-bg border border-brand-border hover:border-brand-borderHover transition">
+                                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+                                    <h4 class="font-bold text-brand-text text-sm">Network Admin / Marketing Supervisor / E-Commerce Lead</h4>
+                                    <span class="text-[11px] font-semibold text-slate-600 bg-slate-200 px-2.5 py-0.5 rounded-full w-fit">July 2021 – Feb 2024</span>
+                                </div>
+                                <p class="text-xs font-semibold text-brand-muted mb-2">Winland Electronics and Electrical Center</p>
+                                <p class="text-xs text-brand-muted leading-relaxed">Directed digital marketing operations, managed multi-channel E-Commerce platforms (Shopee, TikTok, Lazada), produced promotional media, and maintained internal network infrastructure.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CARD 4: ABOUT ME -->
+                <section id="about" class="bento-card bg-brand-card rounded-3xl p-6 border border-brand-border shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 rounded-xl bg-brand-accentLight border border-brand-accentBorder flex items-center justify-center text-brand-accent">
+                                    <i data-lucide="user" class="w-4 h-4"></i>
+                                </div>
+                                <h3 class="font-bold text-lg text-brand-text">About Me</h3>
+                            </div>
+                        </div>
+
+                        <p class="text-xs text-brand-muted leading-relaxed mb-4">
+                            Passionate IT professional seeking to enhance organization standards through robust Computer Systems installation, network configuration, server administration, and modern web development.
+                        </p>
+                        <p class="text-xs text-brand-muted leading-relaxed mb-4">
+                            Equipped with high-level multimedia production capabilities using Adobe Creative Suite to produce engaging promotional assets and drive e-commerce sales.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- CARD 5: CERTIFICATIONS & CREDENTIALS -->
+                <section id="credentials" class="bento-card bg-brand-card rounded-3xl p-6 border border-brand-border shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 rounded-xl bg-brand-accentLight border border-brand-accentBorder flex items-center justify-center text-brand-accent">
+                                    <i data-lucide="award" class="w-4 h-4"></i>
+                                </div>
+                                <h3 class="font-bold text-lg text-brand-text">Certifications</h3>
+                            </div>
+                            <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">Verified</span>
+                        </div>
+
+                        <div class="space-y-2.5">
+                            <div class="flex items-start gap-2.5 p-2.5 rounded-xl bg-brand-bg border border-brand-border">
+                                <i data-lucide="shield-check" class="w-4 h-4 text-blue-600 shrink-0 mt-0.5"></i>
+                                <div>
+                                    <h4 class="text-xs font-bold text-brand-text leading-tight">CompTIA IT Fundamentals+ (ITF+)</h4>
+                                    <span class="text-[10px] text-brand-muted font-medium">Issued 2025</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-2.5 p-2.5 rounded-xl bg-brand-bg border border-brand-border">
+                                <i data-lucide="lock" class="w-4 h-4 text-sky-600 shrink-0 mt-0.5"></i>
+                                <div>
+                                    <h4 class="text-xs font-bold text-brand-text leading-tight">Cisco CCST Cybersecurity</h4>
+                                    <span class="text-[10px] text-brand-muted font-medium">Issued 2025</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-2.5 p-2.5 rounded-xl bg-brand-bg border border-brand-border">
+                                <i data-lucide="palette" class="w-4 h-4 text-purple-600 shrink-0 mt-0.5"></i>
+                                <div>
+                                    <h4 class="text-xs font-bold text-brand-text leading-tight">Adobe Certified Professional</h4>
+                                    <p class="text-[10px] text-brand-muted">Visual Design via Adobe Photoshop (2024)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- CARD 6: SERVICES -->
+                <section id="services" class="bento-card bg-brand-card rounded-3xl p-6 border border-brand-border shadow-sm md:col-span-2 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 rounded-xl bg-brand-accentLight border border-brand-accentBorder flex items-center justify-center text-brand-accent">
+                                    <i data-lucide="wrench" class="w-4 h-4"></i>
+                                </div>
+                                <h3 class="font-bold text-lg text-brand-text">Core Competencies</h3>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="p-4 rounded-2xl bg-brand-bg border border-brand-border">
+                                <h4 class="text-xs font-bold text-brand-text uppercase tracking-wide mb-2 text-brand-accent">E-Commerce Management</h4>
+                                <p class="text-xs text-brand-muted">Store setup & management across TikTok Shop, Shopee, and Facebook commerce platforms.</p>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-brand-bg border border-brand-border">
+                                <h4 class="text-xs font-bold text-brand-text uppercase tracking-wide mb-2 text-brand-accent">Multimedia Production</h4>
+                                <p class="text-xs text-brand-muted">Graphic design and video editing for social ads, branding, and promotional media.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Contact Callout -->
+            <section class="bg-gradient-to-r from-brand-text to-slate-800 rounded-3xl p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+                <div class="space-y-2 z-10 text-center md:text-left">
+                    <h3 class="text-xl md:text-2xl font-bold">Ready to build or scale your technical infrastructure?</h3>
+                    <p class="text-xs md:text-sm text-slate-300 max-w-xl">Available for network administration, e-commerce growth management, and multimedia consulting.</p>
+                </div>
+                <button onclick="openContactModal()" class="bg-brand-accent hover:bg-orange-600 text-white px-5 py-2.5 rounded-xl text-xs font-bold transition shadow-lg shadow-orange-500/30 shrink-0">
+                    Hire Reymund
+                </button>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-brand-card rounded-3xl max-w-md w-full p-6 border border-brand-border shadow-2xl relative">
+            <button onclick="closeContactModal()" class="absolute top-5 right-5 text-brand-muted hover:text-brand-text p-1 rounded-full hover:bg-brand-bg transition">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <h3 class="text-lg font-bold text-brand-text mb-4">Send a Message</h3>
+            <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+                <input type="text" required placeholder="Your Name" class="w-full px-3.5 py-2.5 rounded-xl bg-brand-bg border border-brand-border text-xs">
+                <input type="email" required placeholder="Your Email" class="w-full px-3.5 py-2.5 rounded-xl bg-brand-bg border border-brand-border text-xs">
+                <textarea rows="3" required placeholder="Message" class="w-full px-3.5 py-2.5 rounded-xl bg-brand-bg border border-brand-border text-xs resize-none"></textarea>
+                <button type="submit" class="w-full bg-brand-text hover:bg-brand-accent text-white font-bold py-3 rounded-xl text-xs transition">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+        function openContactModal() { document.getElementById('contactModal').classList.remove('hidden'); }
+        function closeContactModal() { document.getElementById('contactModal').classList.add('hidden'); }
+        function handleFormSubmit(e) { e.preventDefault(); closeContactModal(); alert("Message sent!"); }
+    </script>
+</body>
+</html>
+
